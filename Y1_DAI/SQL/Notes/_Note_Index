@@ -1,0 +1,48 @@
+-- Index of SQL Note Selection
+
+
+    REGEX_FORMATTING.sql
+        SQL Wildcards 'LIKE'
+        SQL 'SIMILAR TO'
+        *SQL REGEX (POSIX)
+
+
+    W2_SELECT_WHERE_ORDER_BASIC_STATEMENTS.sql
+        SELECT & SELECT DISTINCT
+        WHERE
+            IN {SOME_RANGE}
+            BETWEEN {LOWER_LIMIT} AND {UPPER_LIMIT}
+            Conditionals (AND, NOT, OR)
+        ORDER BY
+            NULL FIRST / NULL LAST
+        UPPER() | LOWER() | INITCAP()
+        FETCH
+            OFFSET
+        CURSOR
+            Declaration of cursors
+            FETCH from CURSOR
+        GROUP BY
+            Using aggregate expressions on entire columns.
+
+
+    W3_JOIN.sql
+        Join Types
+            CROSS Join
+            INNER Join
+            LEFT OUTER Join
+            RIGHT OUTER JOIN
+            FULL OUTER Join
+            ** NATURAL Join
+        NON-EQUI Join (joining Using Extra Conditionals)
+        AUTO-Join (Joining with Itself)  || (Finding Relationships within a SINGLE Table)
+
+    ++W3_DATE_TIME_CONVERSIONS_FORMATTING
+        * Interval
+
+    ++Data Types -> THERE ARE SO FUCKING MANY
+        GEOMETRIC, ENUMARTED EVEN NETWORK ADDR TYPES WTFFF
+
+
+
+* Ignore unless curious
+
