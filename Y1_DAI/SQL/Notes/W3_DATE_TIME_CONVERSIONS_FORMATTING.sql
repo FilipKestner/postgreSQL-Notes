@@ -1,6 +1,8 @@
 -- W2: Date & Time + Formatting + Conversions
 -- ---------------------------------------------------------------------------------------------------------------------
 
+-- References:
+
 -- Date Type in PostgreSQL:
     -- The 'Date' data type in SQL has many different forms it can come in. They all follow
     -- one of these general formats:
@@ -80,3 +82,26 @@
     -- | TZM                       | time-zone minutes                                                  |
     -- | OF                        | time-zone offset from UTC (only supported in to_char)              |
     -- +---------------------------+--------------------------------------------------------------------+
+-- ------------------------------------------------------------------------------------------------------
+
+-- Date & Number Formatting Notes:
+
+-- Useful Date Functions
+    -- TO_CHAR(timestmap, )
+
+-- TO_CHAR
+-- SET -> Language
+-- TO_DATE
+-- TO_NUMBER
+
+-- current_date
+-- current_time
+
+-- date_part
+
+-- age
+
+
+-- ROUND
+-- TRUNC
+-- MOD

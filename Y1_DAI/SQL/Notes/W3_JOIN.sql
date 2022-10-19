@@ -126,10 +126,16 @@
     -- Although it looks a little complex this query simply gets all family members that are
     -- UNDER THE AGE OF 18 [ (current_date - family_members.birth_date) <= 6700 ]
     SELECT employees.employee_id, first_name, last_name, family_members.relationship, family_members.birth_date,
-           (current_date - family_members.birth_date) as "Age in Days" FROM employees
+           (current_date - family_members.birth_date) as "Age in Days", age(family_members.birth_date)FROM employees
         JOIN family_members
         ON family_members.employee_id = employees.employee_id
         AND (current_date - family_members.birth_date) <= 6700;
+
+
+    SELECT e.employee_id, e.first_name, e.last_name, fm.relationship, fm.birth_date
+        FROM employees e
+        JOIN family_members fm ON e.employee_id = fm.employee_id
+        WHERE date_part('year',age(fm.birth_date)) < 18;
 
     -- ** You can use conditionals to narrow your search. Can use the conditionals learned in W1 here
     -- in the same way as you would when you select normally from a table. Essentially the table is

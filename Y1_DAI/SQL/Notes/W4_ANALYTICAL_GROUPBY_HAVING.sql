@@ -171,3 +171,13 @@
 
     -- ** 'WHERE' applies to rows while 'HAVING' applies to
     -- GROUPS OF ROWS
+
+
+
+    -- Show all employees with 2 or more family members
+    SELECT e.employee_id, COUNT(fm.name) FROM employees e
+        JOIN family_members fm on e.employee_id = fm.employee_id
+        GROUP BY e.employee_id
+        HAVING COUNT(fm.name) >= 2;
+
+

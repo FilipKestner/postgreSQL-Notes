@@ -40,10 +40,13 @@
 
 -- 4: Now limit the results table of the previous query to projects
 -- localized in Eindhoven or managed by department Administration.
-    SELECT p.project_name, p.location, e.first_name || ' ' || e.last_name as full_name, e.department_id
+    SELECT p.project_name, p.location, e.first_name || ' ' || e.last_name as full_name, e.department_id,
+        p.department_id as qq
+
         FROM employees e
         JOIN projects p ON e.department_id = p.department_id
-        WHERE UPPER(p.location) = 'EINDHOVEN' OR p.department_id = 3;
+        WHERE UPPER(p.location) = 'EINDHOVEN' OR p.department_id = 3
+        ORDER BY p.project_name;
 -- 5: ~~
 
 -- 6: List employees with their children.
