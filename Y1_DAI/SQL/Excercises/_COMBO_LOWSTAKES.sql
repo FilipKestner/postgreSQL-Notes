@@ -96,10 +96,12 @@ FROM employees e
 
 -- | Manager ID | Manager Last Name | Family Member Name | Family Member Age ( just the years) | Family Member Age when Manger Started Managing their Department
 
-SELECT DISTINCT d.department_id, e1.employee_id, e1.last_name, fm.name, date_part('year',age(fm.birth_date)), date_part('year',age(d.mgr_start_date,fm.birth_date)) FROM employees e1
+SELECT DISTINCT e1.employee_id, e1.last_name, fm.name, date_part('year',age(fm.birth_date)),
+    date_part('year',age(d.mgr_start_date,fm.birth_date))
+    FROM employees e1
     JOIN employees e2 ON e2.manager_id = e1.employee_id
     INNER JOIN family_members fm ON e1.employee_id = fm.employee_id
-    JOIN departments d ON e1.employee_id = d.manager_id
+    JOIN departments d ON e1.manager_id= d.manager_id
     ORDER BY e1.employee_id;
 
 
