@@ -129,6 +129,7 @@
         FROM family_members
         WHERE relationship = 'PARTNER'
         AND date_part('year',age(birth_date)) > 35
+        --AND EXTRACT(YEAR FROM age(birth_date)) > 35
         AND date_part('year',age(birth_date)) < 45 ;
 
 

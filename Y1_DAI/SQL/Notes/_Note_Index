@@ -1,7 +1,7 @@
 -- Index of SQL Note Selection
 
 
-    REGEX_FORMATTING.sql
+    W*_REGEX_FORMATTING.sql
         SQL Wildcards 'LIKE'
         SQL 'SIMILAR TO'
         *SQL REGEX (POSIX)
@@ -36,13 +36,43 @@
         NON-EQUI Join (joining Using Extra Conditionals)
         AUTO-Join (Joining with Itself)  || (Finding Relationships within a SINGLE Table)
 
-    ++W3_DATE_TIME_CONVERSIONS_FORMATTING
-        * Interal
+    W3_DATE_TIME_CONVERSIONS_FORMATTING
         Date Types Reference
         Date Formatting Reference
+        * Intervals
+
+    W4_ANALYITCAL_GROUPBY_HAVING.sql
+        Analytical Functions
+            Functions:
+                AVG
+                SUM
+                MAX / MIN
+                COUNT & COUNT(*)
+            GROUP BY + HAVING
+
+    W5_SETOPS_TXTFUNC_CONDITIONALS.sql
+        Set Operators
+            UNION
+            INTERSECT
+            EXCEPT
+        Text Functions
+            UPPER, LOWER, INITCAP
+            LENGTH
+            SUBSTR
+                PostgreSQL Indexing
+            POSITION
+            CONCAT & CONCAT_WS
+            LPAD & RPAD
+            TRIM
+            REPLACE
+        Conditional Functions:
+            GREATEST & LEAST
+            CASE WHEN
+            COALESCE
+            NULLIF
 
     ++Data Types -> THERE ARE SO FUCKING MANY
-        GEOMETRIC, ENUMARTED EVEN NETWORK ADDR TYPES WTFFF
+        GEOMETRIC, ENUMERATED EVEN NETWORK ADDR TYPES WTFFF
 
 
 
