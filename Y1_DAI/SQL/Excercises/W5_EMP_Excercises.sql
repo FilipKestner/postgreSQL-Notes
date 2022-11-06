@@ -167,7 +167,7 @@
 -- f. Now depending on the end time of the class and the system date, show how long is left (see d. ) or how long it has been finished.
 -- Hint: use the ABS(number) function to make any negative number positive (absolute value).
     -- Clock
-    -- Class has been over for 1 hour and 10 minutes.\
+    -- Class has been over for 1 hour and 10 minutes.
 
 
 SELECT current_timestamp + interval '2 hours',   to_timestamp('26/10/2022 16:30', 'DD/MM/YYYY HH24:MI'), -- why to_timestamp and not to_date
