@@ -155,6 +155,9 @@
             + EXTRACT(minutes from ( (CURRENT_DATE + INTERVAL '20 hours') - CURRENT_TIMESTAMP(0))))
                || ' minutes';
 
+    SELECT 'The class ends in ' ||
+
+
 
 -- d. If the class is less than an hour, only display the number of minutes (not the hour) (use a conditional function)
     -- Clock
@@ -170,9 +173,10 @@
     -- Class has been over for 1 hour and 10 minutes.
 
 
-SELECT current_timestamp + interval '2 hours',   to_timestamp('26/10/2022 16:30', 'DD/MM/YYYY HH24:MI'), -- why to_timestamp and not to_date
-to_timestamp('26/10/2022 16:30', 'DD/MM/YYYY HH24:MI') - (current_timestamp + interval '2 hours'),
-date_part('minute', to_timestamp('26/10/2022 16:30', 'DD/MM/YYYY HH24:MI')
-                        - (current_timestamp + interval '2 hours')) +
-date_part('hour', to_timestamp('26/10/2022 16:30', 'DD/MM/YY HH24:MI')
-                      - (current_timestamp + interval '2 hours')) * 60;
+SELECT current_timestamp + interval '2 hours',
+       to_timestamp('08/11/2022 16:30', 'DD/MM/YYYY HH24:MI'), -- why to_timestamp and not to_date
+       to_timestamp('08/11/2022 16:30', 'DD/MM/YYYY HH24:MI') - (current_timestamp + interval '2 hours'),
+       date_part('minute', to_timestamp('26/10/2022 16:30', 'DD/MM/YYYY HH24:MI')
+            - (current_timestamp + interval '2 hours'))
+            + date_part('hour', to_timestamp('26/10/2022 16:30', 'DD/MM/YY HH24:MI')
+            - (current_timestamp + interval '2 hours')) * 60;
