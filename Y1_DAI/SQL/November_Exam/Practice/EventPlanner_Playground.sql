@@ -43,4 +43,4 @@ SELECT year, COUNT(title) FROM cds
 
 SELECT date_part('year',AGE(to_date(year,'YYYY'))) || ' years since release' FROM cds;
 
-SELECT
+SELECT current_date;
