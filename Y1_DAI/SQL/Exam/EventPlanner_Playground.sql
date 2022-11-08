@@ -29,3 +29,18 @@ SELECT first_name || '.' || last_name || '@DJBookings.com' FROM clients;
 SELECT t.description FROM types t
 UNION ALL
 SELECT c.first_name FROM clients c;
+
+-- 4. List the type of venue for each event
+
+SELECT e.id, v.loc_type FROM events e
+LEFT JOIN venues v ON v.id = e.id;
+
+
+
+SELECT year, COUNT(title) FROM cds
+         GROUP BY year;
+
+
+SELECT date_part('year',AGE(to_date(year,'YYYY'))) || ' years since release' FROM cds;
+
+SELECT

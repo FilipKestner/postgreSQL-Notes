@@ -73,6 +73,17 @@
     Select department_id,project_name FROM projects OFFSET 2 ROWS;
     Select department_id, project_name FROM projects FETCH NEXT 3 ROWS ONLY;
 
+    -- WITH TIES
+    --SELECT last_name, salary FROM employees ORDER BY salary DESC;
+
+    SELECT last_name, salary FROM employees ORDER BY salary DESC
+    FETCH NEXT 2 WITH TIES;
+
+
+
+    --FETCH NEXT 2 ROWS WITH TIES;
+
+
     -- CURSORS: **
     -- | BEGIN WORK
     -- | DECLARE someCURSOR SCROL CURSOR FOR SELECT SOME_COLUMN FROM SOME_TABLE
@@ -109,4 +120,5 @@
     --SELECT * from clients WHERE (ROW_NUMBER() OVER %4 = 0;
     --SELECT ROW_NUMBER() OVER(ORDER BY clientno), clientno  FROM clients
     --        WHERE ;
+
     -- --------------------------------------------------------------------
