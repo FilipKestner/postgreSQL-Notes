@@ -5,7 +5,6 @@
     -- ** All joins covered by W3_Join.sql
 
 -- Analytical Functions
-
     --AVG       -> Computes the average ( MEAN )
     --             of all NON-NULL input values
     SELECT AVG(salary) FROM employees;

@@ -155,7 +155,7 @@
             + EXTRACT(minutes from ( (CURRENT_DATE + INTERVAL '20 hours') - CURRENT_TIMESTAMP(0))))
                || ' minutes';
 
-    SELECT 'The class ends in ' ||
+
 
 
 
